@@ -86,18 +86,6 @@ DMMONA/
    - Real-time logs appear in the console.
    - Detailed logs are saved to `dmmona.log` (configured in `src/logger.py`).
 
-## Packaging & Distribution (Optional)
-To package DMMONA as a Python package (for PyPI):
-
-1. **Build the Package:**
-   ```bash
-   python setup.py sdist bdist_wheel
-   ```
-2. **Upload with Twine:**
-   ```bash
-   pip install twine
-   twine upload dist/*
-   ```
 
 Users can then install DMMONA via:
 ```bash
