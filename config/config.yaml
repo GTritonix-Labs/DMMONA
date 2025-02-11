@@ -1,0 +1,45 @@
+# Configuration file for DMMONA
+
+# dataset_path: can point to a CSV file, an images folder, a video file, or graph data.
+dataset_path: "./data/my_dataset.csv"
+dataset_type: "csv"    # Options: "csv", "images", "videos", "graphs"
+
+# Dataset-specific options
+dataset_options:
+  csv:
+    delimiter: ","
+    header: true
+  images:
+    image_format: "jpg"
+    target_resolution: [224, 224]
+  videos:
+    frame_rate: 30
+    clip_duration: 5   # in seconds
+  graphs:
+    node_feature_dim: 64
+    edge_feature_dim: 16
+
+training:
+  epochs: 50
+  batch_size: 32
+  learning_rate: 0.001
+  random_seed: 42
+  log_interval: 10   # Log metrics every 10 iterations
+
+resource_limits:
+  max_memory: 12       # Maximum memory (GB) allowed
+  max_cpu: 80          # Maximum CPU usage percentage allowed
+  # max_gpu: 80       # Uncomment and set if GPU usage monitoring is added
+
+meta_controller:
+  reward_accuracy_weight: 1.0      # Weight for accuracy improvement in the reward function
+  reward_resource_penalty: 0.5     # Penalty factor for resource overuse
+
+architecture:
+  initial_model: "baseline_cnn"    # Identifier for the initial network architecture
+
+precision_modes:
+  available:
+    - "fp32"         # Full-precision
+    - "mixed"        # Mixed-precision
+    - "quantized"    # Quantized mode
