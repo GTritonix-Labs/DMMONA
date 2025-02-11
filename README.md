@@ -49,8 +49,9 @@ DMMONA/
 ### Setup Instructions
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/your-username/dmmona.git
-   cd dmmona
+    git clone https://github.com/GTritonix-Labs/DMMONA.git
+    cd DMMONA
+
    ```
 
 2. **Create & Activate a Virtual Environment:**
@@ -99,8 +100,9 @@ Contributions are welcome! To contribute:
 1. **Fork the Repository.**
 2. **Clone Your Fork:**
    ```bash
-   git clone https://github.com/your-username/dmmona.git
-   cd dmmona
+   git clone https://github.com/your-username/DMMONA.git
+   cd DMMONA
+
    ```
 3. **Create a Branch:**
    ```bash
